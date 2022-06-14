@@ -32,7 +32,7 @@ Ext.getMetadataValue("[Vacuum] ChPressure", ChPressure);
 // if the image is acquired by electron beam, then
 if (BeamType == "EBeam") {
 
-Ext.getMetadataValue("[EScan] PixelWidth", value1);
+Ext.getMetadataValue("[EScan] PixelWidth", PixelWidth);
 Ext.getMetadataValue("[Beam] HV", HV);
 Ext.getMetadataValue("[Beam] ImageMode", ImageMode);
 Ext.getMetadataValue("[EBeam] EmissionCurrent", EmissionCurrent);
@@ -75,29 +75,30 @@ BeamCurrent = parseFloat(BeamCurrent)*1E9; // in nA
 AptDia = parseFloat(AptDia)*1E6; // in um
 WD = parseFloat(WD)*1E3; // in mm
 Dwell = parseFloat(Dwell)*1E6; // in us
-EmissionCurrent = parseFloat(EmissionCurrent)*1E6; // in nA
+EmissionCurrent = parseFloat(EmissionCurrent)*1E6; // in uA
 
 StageR = parseFloat(StageR); // in deg
 StageT = parseFloat(StageT); // in deg
 StageX = parseFloat(StageX)*1E3; // in mm
 StageY = parseFloat(StageY)*1E3; // in mm
 StageZ = parseFloat(StageZ)*1E3; // in mm
+magnification = 0.4144/parseFloat(HFW);
 
-
-print("[EBeam] Emission Current : " + EmissionCurrent + " nA");
+print("[EBeam] Emission Current : " + EmissionCurrent + " uA");
 print("[EBeam] UC Mode : " + BeamMode);
-print("[EBeam] Beam Current : " + BeamCurrent + " uA");
+print("[EBeam] Beam Current : " + BeamCurrent + " nA");
 print("[EBeam] Aperture Diameter : " + AptDia + " um");
 print("[EBeam] Lens Mode : " + LensMode + " mode");
 print("[EBeam] Working Distance : " + WD + " mm");
 print("[EScan] Dwell Time : " + Dwell + " us");
-
 print("[EScan] Line Integration : " + LineIntegration);
 print("[EScan] Line Time : ", LineTime);
 print("[EScan] Scan Interlacing : " + ScanInterlacing);
 print("[EScan] Frame Time : " + FrameTime);
 print("[Image] Frame Integration : " + IntegrationNum);
 print("[Image] Drift Corrected : " + DriftCorr);
+print("[Image] FEI Magnification: " + magnification);
+print("[Image] Pixel Size: " + PixelWidth);
 
 print("[EBeam Deceleration] Mode On : " + EBeamDecelerationMode);
 print("[EBeam Deceleration] Landing Energy : " + LandingEnergy + " V");
@@ -113,12 +114,16 @@ print("\n");
 
 if(parseFloat(HFW) > 0.00001) {
 	var ScaleUnit = "um";
-	setVoxelSize(1E6*value1, 1E6*value1, 1, ScaleUnit);
+	setVoxelSize(1E6*PixelWidth
+, 1E6*PixelWidth
+, 1, ScaleUnit);
 }
 
 else {
 	var ScaleUnit = "nm";
-	setVoxelSize(1E9*value1, 1E9*value1, 1, ScaleUnit);
+	setVoxelSize(1E9*PixelWidth
+, 1E9*PixelWidth
+, 1, ScaleUnit);
 }
 
 }
@@ -126,7 +131,7 @@ else {
 // if the image is acquired by ion beam, then...
 if (BeamType == "IBeam") {
 
-Ext.getMetadataValue("[IScan] PixelWidth", value1);
+Ext.getMetadataValue("[IScan] PixelWidth", PixelWidth);
 Ext.getMetadataValue("[IBeam] HV", HV);
 Ext.getMetadataValue("[Beam] ImageMode", ImageMode); // have not use this parameter
 Ext.getMetadataValue("[IBeam] EmissionCurrent", EmissionCurrent);
@@ -149,21 +154,29 @@ BeamCurrent = parseFloat(BeamCurrent)*1E9; // in nA
 AptDia = parseFloat(AptDia)*1E6; // in um
 WD = parseFloat(WD)*1E3; // in mm
 Dwell = parseFloat(Dwell)*1E6; // in us
+magnification = 0.4144/parseFloat(HFW);
 
 print("[IBeam] Beam Current : " + BeamCurrent + " uA");
 // print("[IBeam] Aperture Diameter : " + AptDia + " um");
 print("[IBeam] Working Distance : " + WD + " mm");
 print("[IScan] Dwell Time : " + Dwell + " us");
+print("[Image] FEI Magnification: " + magnification);
+print("[Image] Pixel Size: " + PixelWidth);
+
 print("\n");
 
 if(parseFloat(HFW) > 0.00001) {
 	var ScaleUnit = "um";
-	setVoxelSize(1E6*value1, 1E6*value1, 1, ScaleUnit);
+	setVoxelSize(1E6*PixelWidth
+, 1E6*PixelWidth
+, 1, ScaleUnit);
 }
 
 else {
 	var ScaleUnit = "nm";
-	setVoxelSize(1E9*value1, 1E9*value1, 1, ScaleUnit);
+	setVoxelSize(1E9*PixelWidth
+, 1E9*PixelWidth
+, 1, ScaleUnit);
 }
 
 Ext.close();
