@@ -5,6 +5,8 @@ an ImageJ toolset for EM image analysis
 
 This is a suite of ImageJ plugins that are used for processing images acquired from electron microscopes. Currently the main focus is on SEM images, but I will keep working on streamline the image processing of both SEM and TEM data.
 
+2022-06-14 Update note: Add Python script plugin for Tescan SEM tiff metadata reading. Add instruction page for flat field correction. Correct FEI metadata display bug.
+
 # **Components and Functions**
 
 Click the links below to find more about each tool.
@@ -13,10 +15,11 @@ Click the links below to find more about each tool.
 2.  \[ [SEM FEI databar cut](https://zxuminescence.wordpress.com/sem-fei-databar-cut/) \] cuts databar from FEI SEM images, then save image and databar as individual files. (Page in preparation)
 3.  \[ [SEM JOEL Scale](https://zxuminescence.wordpress.com/?page_id=874) \] sets image scale based on pixel size store in the .txt file associated with SEM image.
 4.  \[ [SEM ZEISS metadata scale](https://zxuminescence.wordpress.com/sem-zeiss-metadata-scale/) \] reads ZEISS SEM acquisition metadata from tiff tags and set image scale based on pixel size.
-5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] Upcoming soon...
+5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] Upcoming...
 6.  \[ [Image feature measurement annotation](https://zxuminescence.wordpress.com/image-annotation/) \] measures and mark the size of features. It annotates the length of line tool in a calibrated image and export measurement results.
 7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching. (Page in preparation)
 8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
+9.  \[ [ SEM_tescan metadata]() \] Python script that reads Tescan SEM metadata and set scale based on pixel size.
 
 # **Installation**
 
