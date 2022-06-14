@@ -9,14 +9,14 @@ This is a suite of ImageJ plugins that are used for processing images acquired f
 
 Click the links below to find more about each tool.
 
-1.  \[ [SEM FEI metadata and scale](/plugins/sem-fei-metadata-scale) \] reads FEI SEM acquisition metadata from tiff tags and set image scale based on pixel size.
-2.  \[ [SEM FEI databar cut](SEM_FEI_databar_cut) \] cuts databar from FEI SEM images, then save image and databar as individual files. (Page in preparation)
-3.  \[ [SEM JOEL Scale](/plugins/sem-joel-scale) \] sets image scale based on pixel size store in the .txt file associated with SEM image.
-4.  \[ [SEM ZEISS metadata scale](SEM_Zeiss_metadata_scale) \] reads ZEISS SEM acquisition metadata from tiff tags and set image scale based on pixel size.
-5.  \[ [SEM Hitachi metadata scale](SEM_Hitachi_metadata_scale) \] Upcoming soon...
-6.  \[ [Image feature measurement annotation](/plugins/image-annotation) \] measures and mark the size of features. It annotates the length of line tool in a calibrated image and export measurement results.
-7.  \[ [Flat field correction](Flat_field_correction) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching. (Page in preparation)
-8.  \[ [ TEM .ser .dm3 folder export](/plugins/tia-ser-folder-export) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
+1.  \[ [SEM FEI metadata and scale](https://zxuminescence.wordpress.com/sem-fei-metadata-scale/) \] reads FEI SEM acquisition metadata from tiff tags and set image scale based on pixel size.
+2.  \[ [SEM FEI databar cut](https://zxuminescence.wordpress.com/sem-fei-databar-cut/) \] cuts databar from FEI SEM images, then save image and databar as individual files. (Page in preparation)
+3.  \[ [SEM JOEL Scale](https://zxuminescence.wordpress.com/?page_id=874) \] sets image scale based on pixel size store in the .txt file associated with SEM image.
+4.  \[ [SEM ZEISS metadata scale](https://zxuminescence.wordpress.com/sem-zeiss-metadata-scale/) \] reads ZEISS SEM acquisition metadata from tiff tags and set image scale based on pixel size.
+5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] Upcoming soon...
+6.  \[ [Image feature measurement annotation](https://zxuminescence.wordpress.com/image-annotation/) \] measures and mark the size of features. It annotates the length of line tool in a calibrated image and export measurement results.
+7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching. (Page in preparation)
+8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
 
 # **Installation**
 
