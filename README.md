@@ -5,7 +5,7 @@ an ImageJ toolset for EM image analysis
 
 This is a suite of ImageJ plugins that are used for processing images acquired from electron microscopes. Currently the main focus is on SEM images, but I will keep working on streamline the image processing of both SEM and TEM data.
 
-2022-06-14 Update note: Add Python script plugin for Tescan SEM tiff metadata reading. Add instruction page for flat field correction. Correct FEI metadata display bug.
+**2022-06-14 Update note:** Add Python script plugin for Tescan SEM tiff metadata reading. Add instruction page for flat field correction. Correct FEI metadata display bug.
 
 # **Components and Functions**
 
