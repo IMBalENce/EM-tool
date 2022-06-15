@@ -17,7 +17,7 @@ Click the links below to find more about each tool.
 4.  \[ [SEM ZEISS metadata scale](https://zxuminescence.wordpress.com/sem-zeiss-metadata-scale/) \] reads ZEISS SEM acquisition metadata from tiff tags and set image scale based on pixel size.
 5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] Upcoming...
 6.  \[ [Image feature measurement annotation](https://zxuminescence.wordpress.com/image-annotation/) \] measures and mark the size of features. It annotates the length of line tool in a calibrated image and export measurement results.
-7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching. (Page in preparation)
+7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching.
 8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
 9.  \[ [ SEM_tescan metadata]() \] Python script that reads Tescan SEM metadata and set scale based on pixel size.
 
