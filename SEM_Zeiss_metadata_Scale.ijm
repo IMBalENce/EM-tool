@@ -33,18 +33,49 @@ Ext.getMetadataValue("Chamber", ChPressure);
 // if the image is acquired by electron beam, then
 if (BeamType == "SEM") {
 
-Ext.getMetadataValue("Image Pixel Size", value1);
-if(endsWith(value1, "nm")) {
-	ScaleUnit = "nm";
-	pixelSize1 = parseFloat(value1);
-	setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
-}
-else {
-	ScaleUnit = "um";
-	pixelSize1 = parseFloat(value1);
-	setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+SizeX=getWidth;
+
+
+Ext.getMetadataValue("Image Pixel Size", imgPixSize);
+if (parseFloat(imgPixSize)==0){
+	Ext.getMetadataValue("Pixel Size", pixSize);
+	imgPixSize = parseFloat(pixSize)*1024/parseFloat(SizeX);
+	print(SizeX);
+
+	if (endsWith(pixSize, "nm")) {
+		ScaleUnit = "nm";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
+	else if (endsWith(pixSize, "pm")) {
+		ScaleUnit = "pm";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
+	else if (endsWith(pixSize, "um")) {
+		ScaleUnit = "um";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
 }
 
+else {
+	if (endsWith(imgPixSize, "nm")) {
+		ScaleUnit = "nm";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
+	else if (endsWith(imgPixSize, "pm")) {
+		ScaleUnit = "pm";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
+	else if (endsWith(imgPixSize, "um")) {
+		ScaleUnit = "um";
+		pixelSize1 = parseFloat(imgPixSize);
+		setVoxelSize(pixelSize1, pixelSize1, 1, ScaleUnit);
+	}
+}
 
 
 print("Image File : " + id);
@@ -151,20 +182,12 @@ print("[Stage] Stage X : " + StageX);
 print("[Stage] Stage Y : " + StageY);
 print("[Stage] Stage Z : " + StageZ);
 
-
-
-
 print("\n");
-
 }
 
-
-
 // if the image is acquired by ion beam, then...
-if (BeamType == "FIB") {
-
-
-
+if (BeamType == "FIB") 
+{
 Ext.getMetadataValue("Image Pixel Size", value1);
 if(endsWith(value1, "nm")) {
 	ScaleUnit = "nm";
@@ -252,6 +275,5 @@ print("[Stage] Stage Y : " + StageY);
 print("[Stage] Stage Z : " + StageZ);
 
 print("\n");
-
 
 Ext.close();
