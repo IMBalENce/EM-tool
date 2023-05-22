@@ -77,8 +77,8 @@ WD = parseFloat(WD)*1E3; // in mm
 Dwell = parseFloat(Dwell)*1E6; // in us
 EmissionCurrent = parseFloat(EmissionCurrent)*1E6; // in uA
 
-StageR = parseFloat(StageR); // in deg
-StageT = parseFloat(StageT); // in deg
+StageR = parseFloat(StageR)*180/PI; // in deg
+StageT = parseFloat(StageT)*180/PI; // in deg
 StageX = parseFloat(StageX)*1E3; // in mm
 StageY = parseFloat(StageY)*1E3; // in mm
 StageZ = parseFloat(StageZ)*1E3; // in mm
