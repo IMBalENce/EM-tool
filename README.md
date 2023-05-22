@@ -20,6 +20,7 @@ Click the links below to find more about each tool.
 7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching.
 8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
 9.  \[ [ SEM_tescan metadata]() \] Python script that reads Tescan SEM metadata and set scale based on pixel size.
+10. \[ [ TEM DE camera calibration]() \] Python script for calibrating the pixel size of images acquired from a TEM DE(Direct Electron)-branded camera.
 
 # **Installation**
 
