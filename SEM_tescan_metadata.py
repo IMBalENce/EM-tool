@@ -1,3 +1,21 @@
+# Copyright 2018-2023 Zhou XU
+#
+# This file is part of ImageJ plugin EM-tool.
+#
+# EM-tool is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# EM-tool is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with EM-tool.  If not, see <http:#www.gnu.org/licenses/>.
+#
+#
 # Tescan SEM metadata scale
 # Set Tescan SEM scale based on pixel size and display acquisition metadata
 # Written by Zhou XU
@@ -5,11 +23,6 @@
 # 2022/06/13
 # Note: part of the tag unpacking code is adopted from the python tifffile library. 
 #       Check out https://github.com/cgohlke/tifffile.git for more information
-
-#  Copyright 2022 Zhou Xu
-# This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
-# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License along with this program; if not, If not, see <http://www.gnu.org/licenses/>. 
 
 import struct
 from ij import IJ
