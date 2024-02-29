@@ -28,7 +28,7 @@ Click the links below to find more about each tool.
 
 1\. [Fiji](https://fiji.sc) (Fiji Is Just ImageJ) should be installed on your computer.
 
-2\. Click "Help | Update... to open the Fiji updater. If it's the first time updating your Fiji, it might take some time to download the update files and may also require to restart Fiji a few times. Once done, click {% include bc path="Help | Update..." %} again to bring up the ImageJ updater window.
+2\. Click "Help | Update... to open the Fiji updater. If it's the first time updating your Fiji, it might take some time to download the update files and may also require to restart Fiji a few times. Once done, click "Help / Update..." again to bring up the ImageJ updater window.
 
 <figure><img src="https://zxuminescence.files.wordpress.com/2020/09/emtool_01.jpg" width="350" alt="EMtool_01.jpg"> </figure>
 
