@@ -1,5 +1,7 @@
 # EM-tool
-an ImageJ toolset for EM image analysis
+An ImageJ plugin set for EM image analysis
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11169119.svg)](https://doi.org/10.5281/zenodo.11169119)
 
 # **Overview**
 
