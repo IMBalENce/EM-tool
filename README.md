@@ -1,5 +1,7 @@
 # EM-tool
-an ImageJ toolset for EM image analysis
+An ImageJ plugin set for EM image analysis
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11169119.svg)](https://doi.org/10.5281/zenodo.11169119)
 
 # **Overview**
 
@@ -20,6 +22,7 @@ Click the links below to find more about each tool.
 7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching.
 8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
 9.  \[ [ SEM_tescan metadata]() \] Python script that reads Tescan SEM metadata and set scale based on pixel size.
+10. \[ [ TEM DE camera calibration]() \] Python script for calibrating the pixel size of images acquired from a TEM DE(Direct Electron)-branded camera.
 
 # **Installation**
 
@@ -27,7 +30,7 @@ Click the links below to find more about each tool.
 
 1\. [Fiji](https://fiji.sc) (Fiji Is Just ImageJ) should be installed on your computer.
 
-2\. Click "Help | Update... to open the Fiji updater. If it's the first time updating your Fiji, it might take some time to download the update files and may also require to restart Fiji a few times. Once done, click {% include bc path="Help | Update..." %} again to bring up the ImageJ updater window.
+2\. Click "Help | Update... to open the Fiji updater. If it's the first time updating your Fiji, it might take some time to download the update files and may also require to restart Fiji a few times. Once done, click "Help / Update..." again to bring up the ImageJ updater window.
 
 <figure><img src="https://zxuminescence.files.wordpress.com/2020/09/emtool_01.jpg" width="350" alt="EMtool_01.jpg"> </figure>
 
