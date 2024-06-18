@@ -1,4 +1,4 @@
-// Set JOEL SEM scale and display acquisition metadata using txt Metadata
+// Set JEOL SEM scale from acquisition metadata .txt file
 // Author: Zhou XU
 // at Monash Centre for Electron Microscopy
 // Windows 10 Enterprise Ver. 1803
@@ -29,8 +29,8 @@ for (i=0; i<lengthOf(lines); i++)
 {
 	items=split(lines[i], cellseparator);
 	for (j=1; j<lengthOf(items); j++)
-if (items[0]=="$$SM_MICRON_BAR") idBarPixel = i;
-if (items[0]=="$$SM_MICRON_MARKER") idBarLength = i;
+if (items[0]=="$$SM_MICRON_BAR" || items[0]=="$SM_MICRON_BAR") idBarPixel = i;
+if (items[0]=="$$SM_MICRON_MARKER" || items[0]=="$SM_MICRON_MARKER") idBarLength = i;
 	}
 	
 
@@ -40,8 +40,20 @@ barLength = split(lines[idBarLength], cellseparator);
 barPixel = barPixel[1];
 barLength = barLength[1];
 
+
+if (endsWith(barLength, "deg."))
+{
+barLengthNum = substring(barLength, 0 ,lengthOf(barLength)-4);
+barLengthUnit= "deg";
+mode = "ECP";
+}
+else
+{
 barLengthNum = substring(barLength, 0 ,lengthOf(barLength)-2);
 barLengthUnit= substring(barLength, lengthOf(barLength)-2);
+mode = "Imaging";
+}
+
 pixelSize = parseFloat(barLengthNum)/parseFloat(barPixel);
 
 setVoxelSize(pixelSize, pixelSize, 1, barLengthUnit);

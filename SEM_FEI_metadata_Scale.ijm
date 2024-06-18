@@ -56,11 +56,12 @@ Ext.getMetadataValue("[EScan] FrameTime", FrameTime);
 Ext.getMetadataValue("[Image] Integrate", IntegrationNum);
 Ext.getMetadataValue("[Image] DriftCorrected", DriftCorr);
 
-Ext.getMetadataValue("[Stage] StageR", StageR);
-Ext.getMetadataValue("[Stage] StageT", StageT);
-Ext.getMetadataValue("[Stage] StageX", StageX);
-Ext.getMetadataValue("[Stage] StageY", StageY);
-Ext.getMetadataValue("[Stage] StageZ", StageZ);
+Ext.getMetadataValue("[EBeam] StageR", StageR);
+Ext.getMetadataValue("[EBeam] StageTa", StageT);
+Ext.getMetadataValue("[EBeam] StageX", StageX);
+Ext.getMetadataValue("[EBeam] StageY", StageY);
+Ext.getMetadataValue("[EBeam] StageZ", StageZ);
+Ext.getMetadataValue("[EBeam] ScanRotation", StageRotation);
 
 print("Image File : " + id);
 print("[System] SystemType : " + SystemType);
@@ -77,11 +78,12 @@ WD = parseFloat(WD)*1E3; // in mm
 Dwell = parseFloat(Dwell)*1E6; // in us
 EmissionCurrent = parseFloat(EmissionCurrent)*1E6; // in uA
 
-StageR = parseFloat(StageR); // in deg
-StageT = parseFloat(StageT); // in deg
+StageR = parseFloat(StageR)*180/PI; // in deg
+StageT = parseFloat(StageT)*180/PI; // in deg
 StageX = parseFloat(StageX)*1E3; // in mm
 StageY = parseFloat(StageY)*1E3; // in mm
 StageZ = parseFloat(StageZ)*1E3; // in mm
+ScanRotation = parseFloat(StageRotation)*180/PI; // in deg
 magnification = 0.4144/parseFloat(HFW);
 
 print("[EBeam] Emission Current : " + EmissionCurrent + " uA");
@@ -104,11 +106,12 @@ print("[EBeam Deceleration] Mode On : " + EBeamDecelerationMode);
 print("[EBeam Deceleration] Landing Energy : " + LandingEnergy + " V");
 print("[EBeam Deceleration] Stage Bias : " + StageBias + " V");
 
-print("[Stage] Stage Rotation : " + StageR + " deg");
-print("[Stage] Stage Tilt : " + StageT + " deg");
-print("[Stage] Stage X : " + StageX + " mm");
-print("[Stage] Stage Y : " + StageY + " mm");
-print("[Stage] Stage Z : " + StageZ + " mm");
+print("[EBeam] Scan Rotation : " + ScanRotation + " deg");
+print("[EBeam] Stage Rotation : " + StageR + " deg");
+print("[EBeam] Stage Tilt : " + StageT + " deg");
+print("[EBeam] Stage X : " + StageX + " mm");
+print("[EBeam] Stage Y : " + StageY + " mm");
+print("[EBeam] Stage Z : " + StageZ + " mm");
 
 print("\n");
 
