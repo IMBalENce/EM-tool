@@ -43,27 +43,35 @@ if (items[0]=="$$SM_MICRON_BAR" || items[0]=="$SM_MICRON_BAR") idBarPixel = i;
 if (items[0]=="$$SM_MICRON_MARKER" || items[0]=="$SM_MICRON_MARKER") idBarLength = i;
 	}
 	
+scale_bar_pixel_number_array = split(lines[idBarPixel], cellseparator);
+scale_bar_actual_length_array = split(lines[idBarLength], cellseparator); 
 
-barPixel = split(lines[idBarPixel], cellseparator);
-barLength = split(lines[idBarLength], cellseparator); 
+scale_bar_pixel_number_string = scale_bar_pixel_number_array[1];
+scale_bar_actual_length_string = scale_bar_actual_length_array[1];
 
-barPixel = barPixel[1];
-barLength = barLength[1];
-
-
-if (endsWith(barLength, "deg."))
+// for ECP mode, the bar length is in degree
+if (endsWith(scale_bar_actual_length_string, "deg."))
 {
-barLengthNum = substring(barLength, 0 ,lengthOf(barLength)-4);
+barLengthNum = substring(scale_bar_actual_length_string, 0 ,lengthOf(scale_bar_actual_length_string)-4);
 barLengthUnit= "deg";
 mode = "ECP";
 }
+// The greek letter (mu) in the micron unit is a non-ASCII character, 
+// which is tricky to read by the ImageJ macro language. "Î¼m" is the "um" symbol
+// after read in ImageJ.
+if (endsWith(scale_bar_actual_length_string, "Î¼m"))
+{
+barLengthNum = substring(scale_bar_actual_length_string, 0 ,lengthOf(scale_bar_actual_length_string)-3);
+barLengthUnit= "μm";
+mode = "Imaging";
+}
 else
 {
-barLengthNum = substring(barLength, 0 ,lengthOf(barLength)-2);
-barLengthUnit= substring(barLength, lengthOf(barLength)-2);
+barLengthNum = substring(scale_bar_actual_length_string, 0 ,lengthOf(scale_bar_actual_length_string)-2);
+barLengthUnit= substring(scale_bar_actual_length_string, lengthOf(scale_bar_actual_length_string)-2);
 mode = "Imaging";
 }
 
-pixelSize = parseFloat(barLengthNum)/parseFloat(barPixel);
+pixelSize = parseFloat(barLengthNum)/parseFloat(scale_bar_pixel_number_string);
 
 setVoxelSize(pixelSize, pixelSize, 1, barLengthUnit);
