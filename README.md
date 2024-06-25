@@ -7,6 +7,7 @@ An ImageJ plugin set for EM image analysis
 
 This is a suite of ImageJ plugins that are used for processing images acquired from electron microscopes. Currently the main focus is on SEM images, but I will keep working on streamline the image processing of both SEM and TEM data.
 
+**2024-06-25 Update note:** Add scan rotation reading for FEI metadata. Add ECP image and new metadata format support for new JEOL microscopes. Fix non-ASCII unit sign reading bug for JEOL metadata.\
 **2022-06-14 Update note:** Add Python script plugin for Tescan SEM tiff metadata reading. Add instruction page for flat field correction. Correct FEI metadata display bug.
 
 # **Components and Functions**
@@ -17,7 +18,7 @@ Click the links below to find more about each tool.
 2.  \[ [SEM FEI databar cut](https://zxuminescence.wordpress.com/sem-fei-databar-cut/) \] cuts databar from FEI SEM images, then save image and databar as individual files. (Page in preparation)
 3.  \[ [SEM JOEL Scale](https://zxuminescence.wordpress.com/?page_id=874) \] sets image scale based on pixel size store in the .txt file associated with SEM image.
 4.  \[ [SEM ZEISS metadata scale](https://zxuminescence.wordpress.com/sem-zeiss-metadata-scale/) \] reads ZEISS SEM acquisition metadata from tiff tags and set image scale based on pixel size.
-5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] Upcoming...
+5.  \[ [SEM Hitachi metadata scale](https://zxuminescence.wordpress.com/sem-hitachi-metadata-scale/) \] The basic function of this plugin should be working. However, the Hitachi images seem can be detected automatically by Bioformat plugin and pop up the import dialog box. Therefore, this plugin will not be actively updated. 
 6.  \[ [Image feature measurement annotation](https://zxuminescence.wordpress.com/image-annotation/) \] measures and mark the size of features. It annotates the length of line tool in a calibrated image and export measurement results.
 7.  \[ [Flat field correction](https://zxuminescence.wordpress.com/flat-field-correction/) \] Applies flat filed correction to a folder of images for large area mapping to mitigate chess pattern after stitching.
 8.  \[ [ TEM .ser .dm3 folder export](https://zxuminescence.wordpress.com/tem-ser-dm3-folder-export/) \] This tool convert TIA EM image .ser files and Gatan .dm3 files in a folder to TIFF format.
